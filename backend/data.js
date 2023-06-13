@@ -1,7 +1,22 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+  users: [
+    {
+      name: 'Basir',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true,
+    },
+    {
+      name: 'John',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      _id: '1',
       name: 'nike chemise',
       slug: 'nike-slim-shirt',
       category: 'Shirts',
@@ -14,7 +29,6 @@ const data = {
       description: 'high quality shirt',
     },
     {
-      _id: '2',
       name: 'Adidas Fit Shirt',
       slug: 'adidas-fit-shirt',
       category: 'Shirts',
@@ -27,7 +41,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '3',
       name: 'Nike Slim Pant',
       slug: 'nike-slim-pant',
       category: 'Pants',
@@ -39,8 +52,8 @@ const data = {
       numReviews: 14,
       description: 'high quality product',
     },
+
     {
-      _id: '4',
       name: 'Adidas Fit Pant',
       slug: 'adidas-fit-pant',
       category: 'Pants',
@@ -53,17 +66,79 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '4',
-      name: 'Adidas Fit Pant',
-      slug: 'adidas-fit-pant',
-      category: 'Pants',
-      image: '/images/p4.jpg',
-      price: 65,
-      countInStock: 5,
-      brand: 'Puma',
+      name: 'nikoki',
+      slug: 'sozini',
+      category: 'Shirts',
+      image: '/images/p5.jpg', // 679px × 829px
+      price: 120,
+      countInStock: 10,
+      brand: 'Nike',
       rating: 4.5,
       numReviews: 10,
-      description: 'high quality product',
+      description: 'high quality shirt',
+    },
+    {
+      name: 'New Shirt 1',
+      slug: 'new-shirt-1',
+      category: 'Shirts',
+      image: '/images/p6.jpg',
+      price: 99,
+      countInStock: 5,
+      brand: 'BrandZ',
+      rating: 3.8,
+      numReviews: 7,
+      description: 'Trendy shirt',
+    },
+
+    {
+      name: 'New Pant 1',
+      slug: 'new-pant-1',
+      category: 'Pants',
+      image: '/images/p7.jpg',
+      price: 55,
+      countInStock: 12,
+      brand: 'BrandX',
+      rating: 4.2,
+      numReviews: 6,
+      description: 'Stylish pant',
+    },
+
+    {
+      name: 'New Shirt 2',
+      slug: 'new-shirt-2',
+      category: 'Shirts',
+      image: '/images/p8.jpg',
+      price: 79,
+      countInStock: 8,
+      brand: 'BrandY',
+      rating: 4.3,
+      numReviews: 9,
+      description: 'Comfortable shirt',
+    },
+
+    {
+      name: 'New Pant 2',
+      slug: 'new-pant-2',
+      category: 'Pants',
+      image: '/images/p9.jpg',
+      price: 45,
+      countInStock: 6,
+      brand: 'BrandZ',
+      rating: 3.9,
+      numReviews: 5,
+      description: 'Durable pant',
+    },
+    {
+      name: 'New Shirt 3',
+      slug: 'new-shirt-3',
+      category: 'Shirts',
+      image: '/images/p10.jpg',
+      price: 89,
+      countInStock: 7,
+      brand: 'BrandX',
+      rating: 4.1,
+      numReviews: 8,
+      description: 'Fashionable shirt',
     },
   ],
 };
